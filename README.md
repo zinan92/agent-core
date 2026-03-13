@@ -1,22 +1,33 @@
+<div align="center">
+
 # Wendy System Core
 
-> A public starter package for building an AI-native operating system.
+### Build an AI-native operating system, not just a pile of prompts.
 
 <p>
-  <strong>Skills</strong> + <strong>SOPs</strong> + <strong>Runtime Specs</strong> + <strong>Curated Knowledge</strong>
+  <img alt="public" src="https://img.shields.io/badge/license-MIT-black">
+  <img alt="starter package" src="https://img.shields.io/badge/type-starter_package-1f6feb">
+  <img alt="focus" src="https://img.shields.io/badge/focus-onboarding%20%7C%20runtime%20specs%20%7C%20curated%20knowledge-0969da">
 </p>
 
 <p>
-  For humans evaluating the system and for agents actually bootstrapping it.
+  <strong>Skills</strong> · <strong>SOPs</strong> · <strong>Runtime Specs</strong> · <strong>Curated Knowledge</strong>
 </p>
+
+<p>
+  For humans evaluating the system.<br/>
+  For agents actually bootstrapping it.
+</p>
+
+</div>
 
 Most agent repos still feel like prompt bundles with loose wrappers around a model.
 
 `core` is built around a stricter assumption:
 
-**an agent system should have structure, boundaries, and a reproducible operating model.**
+> **an agent system should have structure, boundaries, and a reproducible operating model**
 
-This repository gives you a compact architectural core for:
+This repository gives you a compact core for:
 
 - onboarding agents
 - managing skills
@@ -25,6 +36,33 @@ This repository gives you a compact architectural core for:
 - keeping a knowledge graph as curated memory
 
 It is intentionally small. The point is not to expose a full private operating system. The point is to publish a clean system core that can be understood, handed off, and reused.
+
+---
+
+<table>
+  <tr>
+    <td valign="top" width="50%">
+      <strong>For Humans</strong><br/>
+      Evaluate the operating model, understand the architecture, and decide whether this system is worth adopting.
+      <br/><br/>
+      Start with:
+      <br/>
+      <a href="./ARCHITECTURE.md">ARCHITECTURE.md</a><br/>
+      <a href="./PRINCIPLES.md">PRINCIPLES.md</a><br/>
+      <a href="./QUICKSTART.md">QUICKSTART.md</a>
+    </td>
+    <td valign="top" width="50%">
+      <strong>For Agents</strong><br/>
+      Bootstrap the smallest working loop, validate it, and avoid inventing extra system behavior.
+      <br/><br/>
+      Start with:
+      <br/>
+      <a href="./docs/agent/START.md">docs/agent/START.md</a><br/>
+      <a href="./docs/agent/CONTRACT.md">docs/agent/CONTRACT.md</a><br/>
+      <a href="./docs/agent/BOOTSTRAP.md">docs/agent/BOOTSTRAP.md</a>
+    </td>
+  </tr>
+</table>
 
 ---
 
