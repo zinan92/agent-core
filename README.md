@@ -23,9 +23,9 @@
 </p>
 
 <p>
-  <a href="./QUICKSTART.md"><strong>Start Here</strong></a> ·
-  <a href="./DEMO-WALKTHROUGH.md"><strong>Run the Demo</strong></a> ·
-  <a href="./docs/agent/START.md"><strong>Agent Entry</strong></a>
+  <a href="./QUICKSTART.md"><img alt="Start Here" src="https://img.shields.io/badge/Start%20Here-human%20path-2da44e"></a>
+  <a href="./DEMO-WALKTHROUGH.md"><img alt="Run the Demo" src="https://img.shields.io/badge/Run%20the%20Demo-smallest%20loop-1f6feb"></a>
+  <a href="./docs/agent/START.md"><img alt="Agent Entry" src="https://img.shields.io/badge/Agent%20Entry-execution%20docs-111827"></a>
 </p>
 
 </div>
@@ -54,28 +54,29 @@
 
 <table>
   <tr>
-    <td valign="top" width="20%">
-      <strong>Onboarding</strong><br/><br/>
-      New agents enter a prepared environment.
+    <td align="center" valign="top" width="33%">
+      <strong>1</strong><br/><br/>
+      <strong>Source of Truth</strong><br/><br/>
+      Durable definitions should have one owner.
     </td>
-    <td valign="top" width="20%">
-      <strong>Skills</strong><br/><br/>
-      Default skills establish the baseline capability layer.
+    <td align="center" valign="top" width="33%">
+      <strong>2</strong><br/><br/>
+      <strong>Entry Paths</strong><br/><br/>
+      Humans evaluate. Agents execute.
     </td>
-    <td valign="top" width="20%">
-      <strong>SOPs</strong><br/><br/>
-      Work is encoded as reusable operating logic.
-    </td>
-    <td valign="top" width="20%">
-      <strong>Runtime</strong><br/><br/>
-      Definition and live state are separated on purpose.
-    </td>
-    <td valign="top" width="20%">
-      <strong>Knowledge</strong><br/><br/>
-      The graph stores curated memory, not raw accumulation.
+    <td align="center" valign="top" width="33%">
+      <strong>5</strong><br/><br/>
+      <strong>Core Primitives</strong><br/><br/>
+      Onboarding, skills, SOPs, runtime, knowledge.
     </td>
   </tr>
 </table>
+
+<div align="center">
+  <strong>Designed for builders who want a clean system core before they scale complexity.</strong>
+</div>
+
+<br/>
 
 `core` gives you a compact foundation for:
 
@@ -89,36 +90,11 @@ It is intentionally small. It is not a full private operating system. It is the 
 
 ---
 
-## Why This Feels More Like A System
-
-Most agent repos optimize for isolated prompts and short-lived wrappers.
-
-`core` optimizes for:
-
-- repeatable onboarding
-- reusable operating definitions
-- clear runtime boundaries
-- a knowledge layer that stays useful over time
-
-This is the difference between:
-
-- "an agent that can do something once"
-- and "a system other humans and agents can keep using"
-
----
-
-<div align="center">
-  <strong>Humans decide whether to adopt the system.</strong><br/>
-  <strong>Agents execute the setup path inside the system.</strong>
-</div>
-
-<br/>
-
 <table>
   <tr>
     <td valign="top" width="50%">
       <strong>For Humans</strong><br/><br/>
-      Evaluate the operating model, understand the architecture, and decide whether this system is worth adopting.
+      Evaluate the operating model, understand the architecture, and decide whether this system is coherent enough to adopt.
       <br/><br/>
       Start with:
       <br/>
@@ -138,6 +114,24 @@ This is the difference between:
     </td>
   </tr>
 </table>
+
+---
+
+## Why This Feels More Like A System
+
+Most agent repos optimize for isolated prompts and short-lived wrappers.
+
+`core` optimizes for:
+
+- repeatable onboarding
+- reusable operating definitions
+- clear runtime boundaries
+- a knowledge layer that stays useful over time
+
+This is the difference between:
+
+- "an agent that can do something once"
+- and "a system other humans and agents can keep using"
 
 ---
 
