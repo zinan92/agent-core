@@ -38,17 +38,21 @@
 
 <table>
   <tr>
-    <td valign="top" width="33%">
-      <strong>Problem</strong><br/><br/>
-      Most agent repos are still prompt bundles with thin wrappers around a model.
+    <td valign="top" width="50%">
+      <strong>Most agent repos</strong><br/><br/>
+      prompt bundle<br/>
+      thin wrapper around a model<br/>
+      runtime state mixed with definitions<br/>
+      unclear onboarding<br/>
+      knowledge base becomes a dumping ground
     </td>
-    <td valign="top" width="33%">
-      <strong>Core Idea</strong><br/><br/>
-      An agent system should have structure, boundaries, and a reproducible operating model.
-    </td>
-    <td valign="top" width="33%">
-      <strong>Outcome</strong><br/><br/>
-      A clean system core that humans can evaluate and agents can actually run.
+    <td valign="top" width="50%">
+      <strong>`core`</strong><br/><br/>
+      operating model<br/>
+      explicit runtime boundaries<br/>
+      repeatable onboarding<br/>
+      curated knowledge graph<br/>
+      separate human path and agent path
     </td>
   </tr>
 </table>
@@ -58,17 +62,17 @@
 <table>
   <tr>
     <td align="center" valign="top" width="33%">
-      <strong>1</strong><br/><br/>
+      <strong>1 owner</strong><br/><br/>
       <strong>Source of Truth</strong><br/><br/>
       Durable definitions should have one owner.
     </td>
     <td align="center" valign="top" width="33%">
-      <strong>2</strong><br/><br/>
+      <strong>2 paths</strong><br/><br/>
       <strong>Entry Paths</strong><br/><br/>
       Humans evaluate. Agents execute.
     </td>
     <td align="center" valign="top" width="33%">
-      <strong>5</strong><br/><br/>
+      <strong>5 primitives</strong><br/><br/>
       <strong>Core Primitives</strong><br/><br/>
       Onboarding, skills, SOPs, runtime, knowledge.
     </td>
