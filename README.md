@@ -78,7 +78,8 @@ flowchart LR
 <table>
   <tr>
     <td valign="top" width="50%">
-      <strong>Most agent repos</strong><br/><br/>
+      <strong>Before</strong><br/>
+      <sub><strong>Most agent repos</strong></sub><br/><br/>
       <code>prompt bundle</code><br/>
       <code>thin wrapper around a model</code><br/>
       <code>runtime state mixed with definitions</code><br/>
@@ -86,7 +87,8 @@ flowchart LR
       <code>knowledge base becomes a dumping ground</code>
     </td>
     <td valign="top" width="50%">
-      <strong>`core`</strong><br/><br/>
+      <strong>After</strong><br/>
+      <sub><strong>`core`</strong></sub><br/><br/>
       <code>operating model</code><br/>
       <code>explicit runtime boundaries</code><br/>
       <code>repeatable onboarding</code><br/>
