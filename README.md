@@ -1,5 +1,7 @@
 <div align="center">
 
+<sub><strong>ARCHITECTURE-FIRST STARTER PACKAGE</strong></sub>
+
 # Wendy System Core
 
 ### Build an AI-native operating system, not just a pile of prompts.
@@ -16,7 +18,8 @@
 
 <p>
   For humans evaluating the system.<br/>
-  For agents actually bootstrapping it.
+  For agents actually bootstrapping it.<br/>
+  For teams that want a reusable core instead of a fragile wrapper.
 </p>
 
 <p>
@@ -27,13 +30,54 @@
 
 </div>
 
-Most agent repos still feel like prompt bundles with loose wrappers around a model.
+> **Not another prompt bundle.**  
+> `core` is a compact operating model for AI-native systems: one place for onboarding, one place for durable definitions, one clean boundary between setup and execution.
 
-`core` is built around a stricter assumption:
+<table>
+  <tr>
+    <td valign="top" width="33%">
+      <strong>Problem</strong><br/><br/>
+      Most agent repos are still prompt bundles with thin wrappers around a model.
+    </td>
+    <td valign="top" width="33%">
+      <strong>Core Idea</strong><br/><br/>
+      An agent system should have structure, boundaries, and a reproducible operating model.
+    </td>
+    <td valign="top" width="33%">
+      <strong>Outcome</strong><br/><br/>
+      A clean system core that humans can evaluate and agents can actually run.
+    </td>
+  </tr>
+</table>
 
-> **an agent system should have structure, boundaries, and a reproducible operating model**
+---
 
-This repository gives you a compact core for:
+<table>
+  <tr>
+    <td valign="top" width="20%">
+      <strong>Onboarding</strong><br/><br/>
+      New agents enter a prepared environment.
+    </td>
+    <td valign="top" width="20%">
+      <strong>Skills</strong><br/><br/>
+      Default skills establish the baseline capability layer.
+    </td>
+    <td valign="top" width="20%">
+      <strong>SOPs</strong><br/><br/>
+      Work is encoded as reusable operating logic.
+    </td>
+    <td valign="top" width="20%">
+      <strong>Runtime</strong><br/><br/>
+      Definition and live state are separated on purpose.
+    </td>
+    <td valign="top" width="20%">
+      <strong>Knowledge</strong><br/><br/>
+      The graph stores curated memory, not raw accumulation.
+    </td>
+  </tr>
+</table>
+
+`core` gives you a compact foundation for:
 
 - onboarding agents
 - managing skills
@@ -41,13 +85,13 @@ This repository gives you a compact core for:
 - separating runtime definition from runtime state
 - keeping a knowledge graph as curated memory
 
-It is intentionally small. The point is not to expose a full private operating system. The point is to publish a clean system core that can be understood, handed off, and reused.
+It is intentionally small. It is not a full private operating system. It is the reusable layer underneath one.
 
 ---
 
-## Why It Feels Different
+## Why This Feels More Like A System
 
-Most agent repos optimize for isolated prompts.
+Most agent repos optimize for isolated prompts and short-lived wrappers.
 
 `core` optimizes for:
 
@@ -63,10 +107,17 @@ This is the difference between:
 
 ---
 
+<div align="center">
+  <strong>Humans decide whether to adopt the system.</strong><br/>
+  <strong>Agents execute the setup path inside the system.</strong>
+</div>
+
+<br/>
+
 <table>
   <tr>
     <td valign="top" width="50%">
-      <strong>For Humans</strong><br/>
+      <strong>For Humans</strong><br/><br/>
       Evaluate the operating model, understand the architecture, and decide whether this system is worth adopting.
       <br/><br/>
       Start with:
@@ -76,7 +127,7 @@ This is the difference between:
       <a href="./QUICKSTART.md">QUICKSTART.md</a>
     </td>
     <td valign="top" width="50%">
-      <strong>For Agents</strong><br/>
+      <strong>For Agents</strong><br/><br/>
       Bootstrap the smallest working loop, validate it, and avoid inventing extra system behavior.
       <br/><br/>
       Start with:
