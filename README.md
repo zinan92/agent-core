@@ -2,6 +2,14 @@
 
 > A public starter package for building an AI-native operating system.
 
+<p>
+  <strong>Skills</strong> + <strong>SOPs</strong> + <strong>Runtime Specs</strong> + <strong>Curated Knowledge</strong>
+</p>
+
+<p>
+  For humans evaluating the system and for agents actually bootstrapping it.
+</p>
+
 Most agent repos still feel like prompt bundles with loose wrappers around a model.
 
 `core` is built around a different assumption:
@@ -17,6 +25,34 @@ This repository gives you a small, reusable core for:
 - keeping a knowledge graph as curated memory
 
 It is intentionally small. The point is not to expose a full private operating system. The point is to give you a clean starting point that can actually be reused.
+
+---
+
+## System Snapshot
+
+```mermaid
+flowchart LR
+    H[Human Evaluator] --> R[README]
+    A[Execution Agent] --> S[docs/agent/START.md]
+
+    R --> ARCH[Architecture]
+    R --> QS[Quickstart]
+    S --> CONTRACT[Agent Contract]
+    S --> BOOT[Bootstrap]
+
+    ARCH --> CORE[Operating Model]
+    BOOT --> ONB[Agent Onboarding]
+
+    ONB --> PROFILE[Agent Profile]
+    ONB --> RUNTIME[Runtime Spec]
+    ONB --> SOP[SOP]
+    BOOT --> KG[Curated Knowledge Note]
+```
+
+This repo is designed with two entrypoints on purpose:
+
+- humans decide whether the system is worth adopting
+- agents execute the setup path
 
 ---
 
@@ -109,6 +145,37 @@ This is the execution path for agents that need to bootstrap, test, or evaluate 
 
 ---
 
+## Human Path vs Agent Path
+
+```mermaid
+flowchart TD
+    subgraph Human["Human-facing path"]
+        H1[README]
+        H2[ARCHITECTURE]
+        H3[PRINCIPLES]
+        H4[QUICKSTART]
+        H1 --> H2
+        H1 --> H3
+        H1 --> H4
+    end
+
+    subgraph Agent["Agent-facing path"]
+        A1[docs/agent/START]
+        A2[docs/agent/CONTRACT]
+        A3[docs/agent/BOOTSTRAP]
+        A4[skills/agent-onboarding]
+        A1 --> A2
+        A1 --> A3
+        A3 --> A4
+    end
+```
+
+The front page is optimized for humans making a decision.
+
+The execution docs are optimized for agents doing the work.
+
+---
+
 ## The Smallest Useful Loop
 
 If you only do one thing with this repo, do this:
@@ -178,6 +245,15 @@ Durable definitions should have one canonical owner.
 ### Runtime Spec vs Runtime State
 
 Definitions and live working state should not be mixed.
+
+```mermaid
+flowchart LR
+    SPEC[Runtime Spec<br/>durable definition] --> WORK[Workspace]
+    WORK --> STATE[Runtime State<br/>inbox / active / handoff / archive]
+
+    SPEC --> DEF[role, tools, scope, schedule]
+    STATE --> LIVE[current tasks, queues, local traces]
+```
 
 ### Curated Knowledge Graph
 
