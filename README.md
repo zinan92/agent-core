@@ -12,11 +12,11 @@
 
 Most agent repos still feel like prompt bundles with loose wrappers around a model.
 
-`core` is built around a different assumption:
+`core` is built around a stricter assumption:
 
-**an agent system should have an operating model, not just a collection of prompts.**
+**an agent system should have structure, boundaries, and a reproducible operating model.**
 
-This repository gives you a small, reusable core for:
+This repository gives you a compact architectural core for:
 
 - onboarding agents
 - managing skills
@@ -24,35 +24,45 @@ This repository gives you a small, reusable core for:
 - separating runtime definition from runtime state
 - keeping a knowledge graph as curated memory
 
-It is intentionally small. The point is not to expose a full private operating system. The point is to give you a clean starting point that can actually be reused.
+It is intentionally small. The point is not to expose a full private operating system. The point is to publish a clean system core that can be understood, handed off, and reused.
 
 ---
 
-## System Snapshot
+## Blueprint
 
 ```mermaid
-flowchart LR
-    H[Human Evaluator] --> R[README]
-    A[Execution Agent] --> S[docs/agent/START.md]
+flowchart TD
+    HUMAN[Human Evaluator] --> README[README]
+    AGENT[Execution Agent] --> START[docs/agent/START]
 
-    R --> ARCH[Architecture]
-    R --> QS[Quickstart]
-    S --> CONTRACT[Agent Contract]
-    S --> BOOT[Bootstrap]
+    README --> ARCH[Architecture]
+    README --> PRINC[Principles]
+    README --> QUICK[Quickstart]
 
-    ARCH --> CORE[Operating Model]
-    BOOT --> ONB[Agent Onboarding]
+    START --> CONTRACT[Agent Contract]
+    START --> BOOT[Agent Bootstrap]
 
-    ONB --> PROFILE[Agent Profile]
-    ONB --> RUNTIME[Runtime Spec]
-    ONB --> SOP[SOP]
-    BOOT --> KG[Curated Knowledge Note]
+    BOOT --> ONBOARD[Agent Onboarding]
+    BOOT --> TEMPLATES[Templates]
+    BOOT --> DEMO[Demo Agent]
+    BOOT --> KG[Knowledge Graph Template]
+
+    ONBOARD --> PROFILE[Agent Profile]
+    ONBOARD --> SPEC[Runtime Spec]
+    ONBOARD --> SOP[SOP]
+    KG --> NOTE[Curated Note]
 ```
 
 This repo is designed with two entrypoints on purpose:
 
 - humans decide whether the system is worth adopting
 - agents execute the setup path
+
+The design bias is:
+
+```text
+company -> role -> SOP -> skill -> step
+```
 
 ---
 
@@ -78,12 +88,6 @@ Most current agent setups break in one of these ways:
 - no durable knowledge layer
 
 This repo exists to fix that with a smaller, stricter core.
-
-Instead of treating agents as ad hoc personalities, this system treats them as:
-
-```text
-company -> role -> SOP -> skill -> step
-```
 
 That makes the system easier to:
 
@@ -133,6 +137,10 @@ Then inspect:
 - [examples/demo-agent/](examples/demo-agent)
 - [DEMO-WALKTHROUGH.md](DEMO-WALKTHROUGH.md)
 
+Human question:
+
+`Is this coherent enough to adopt?`
+
 ### Agent Path
 
 If you are handing this repository to an agent:
@@ -142,6 +150,10 @@ If you are handing this repository to an agent:
 3. [docs/agent/BOOTSTRAP.md](docs/agent/BOOTSTRAP.md)
 
 This is the execution path for agents that need to bootstrap, test, or evaluate the system.
+
+Agent question:
+
+`What is the smallest loop I can execute successfully?`
 
 ---
 
