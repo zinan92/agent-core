@@ -36,23 +36,71 @@
 
 </div>
 
+## System Overview
+
+```mermaid
+flowchart LR
+    subgraph H[Human Path]
+        H1[README]
+        H2[Architecture]
+        H3[Principles]
+        H4[Quickstart]
+        H1 --> H2
+        H1 --> H3
+        H1 --> H4
+    end
+
+    subgraph C[core]
+        C1[Onboarding]
+        C2[Skills]
+        C3[SOPs]
+        C4[Runtime Spec]
+        C5[Knowledge Graph Template]
+        C1 --> C4
+        C2 --> C1
+        C3 --> C1
+        C4 --> C5
+    end
+
+    subgraph A[Agent Path]
+        A1[Agent Start]
+        A2[Contract]
+        A3[Bootstrap]
+        A4[Demo Agent]
+        A1 --> A2
+        A1 --> A3
+        A3 --> A4
+    end
+
+    H4 --> C1
+    A3 --> C1
+
+    classDef human fill:#dff3e4,stroke:#2da44e,color:#0f5132
+    classDef core fill:#e7f0ff,stroke:#1f6feb,color:#0b3d91
+    classDef agent fill:#f3f4f6,stroke:#111827,color:#111827
+
+    class H1,H2,H3,H4 human
+    class C1,C2,C3,C4,C5 core
+    class A1,A2,A3,A4 agent
+```
+
 <table>
   <tr>
     <td valign="top" width="50%">
       <strong>Most agent repos</strong><br/><br/>
-      prompt bundle<br/>
-      thin wrapper around a model<br/>
-      runtime state mixed with definitions<br/>
-      unclear onboarding<br/>
-      knowledge base becomes a dumping ground
+      <code>prompt bundle</code><br/>
+      <code>thin wrapper around a model</code><br/>
+      <code>runtime state mixed with definitions</code><br/>
+      <code>unclear onboarding</code><br/>
+      <code>knowledge base becomes a dumping ground</code>
     </td>
     <td valign="top" width="50%">
       <strong>`core`</strong><br/><br/>
-      operating model<br/>
-      explicit runtime boundaries<br/>
-      repeatable onboarding<br/>
-      curated knowledge graph<br/>
-      separate human path and agent path
+      <code>operating model</code><br/>
+      <code>explicit runtime boundaries</code><br/>
+      <code>repeatable onboarding</code><br/>
+      <code>curated knowledge graph</code><br/>
+      <code>separate human path and agent path</code>
     </td>
   </tr>
 </table>
@@ -103,44 +151,6 @@
     </td>
   </tr>
 </table>
-
----
-
-## Blueprint
-
-```mermaid
-flowchart TD
-    HUMAN[Human Evaluator] --> README[README]
-    AGENT[Execution Agent] --> START[docs/agent/START]
-
-    README --> ARCH[Architecture]
-    README --> PRINC[Principles]
-    README --> QUICK[Quickstart]
-
-    START --> CONTRACT[Agent Contract]
-    START --> BOOT[Agent Bootstrap]
-
-    BOOT --> ONBOARD[Agent Onboarding]
-    BOOT --> TEMPLATES[Templates]
-    BOOT --> DEMO[Demo Agent]
-    BOOT --> KG[Knowledge Graph Template]
-
-    ONBOARD --> PROFILE[Agent Profile]
-    ONBOARD --> SPEC[Runtime Spec]
-    ONBOARD --> SOP[SOP]
-    KG --> NOTE[Curated Note]
-```
-
-This repo is designed with two entrypoints on purpose:
-
-- humans decide whether the system is worth adopting
-- agents execute the setup path
-
-The design bias is:
-
-```text
-company -> role -> SOP -> skill -> step
-```
 
 ---
 
