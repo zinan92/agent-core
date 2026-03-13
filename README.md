@@ -18,8 +18,7 @@
 
 <p>
   For humans evaluating the system.<br/>
-  For agents actually bootstrapping it.<br/>
-  For teams that want a reusable core instead of a fragile wrapper.
+  For agents actually bootstrapping it.
 </p>
 
 <p>
@@ -30,8 +29,12 @@
 
 </div>
 
-> **Not another prompt bundle.**  
-> `core` is a compact operating model for AI-native systems: one place for onboarding, one place for durable definitions, one clean boundary between setup and execution.
+<div align="center">
+
+**Not another prompt bundle.**  
+`core` is a compact operating model with one owner for durable definitions, one path for human evaluation, and one path for agent execution.
+
+</div>
 
 <table>
   <tr>
@@ -72,29 +75,11 @@
   </tr>
 </table>
 
-<div align="center">
-  <strong>Designed for builders who want a clean system core before they scale complexity.</strong>
-</div>
-
-<br/>
-
-`core` gives you a compact foundation for:
-
-- onboarding agents
-- managing skills
-- defining SOPs
-- separating runtime definition from runtime state
-- keeping a knowledge graph as curated memory
-
-It is intentionally small. It is not a full private operating system. It is the reusable layer underneath one.
-
----
-
 <table>
   <tr>
     <td valign="top" width="50%">
       <strong>For Humans</strong><br/><br/>
-      Evaluate the operating model, understand the architecture, and decide whether this system is coherent enough to adopt.
+      Evaluate the operating model and decide whether this system is coherent enough to adopt.
       <br/><br/>
       Start with:
       <br/>
@@ -104,7 +89,7 @@ It is intentionally small. It is not a full private operating system. It is the 
     </td>
     <td valign="top" width="50%">
       <strong>For Agents</strong><br/><br/>
-      Bootstrap the smallest working loop, validate it, and avoid inventing extra system behavior.
+      Bootstrap the smallest working loop, validate it, and do not invent extra system behavior.
       <br/><br/>
       Start with:
       <br/>
@@ -114,24 +99,6 @@ It is intentionally small. It is not a full private operating system. It is the 
     </td>
   </tr>
 </table>
-
----
-
-## Why This Feels More Like A System
-
-Most agent repos optimize for isolated prompts and short-lived wrappers.
-
-`core` optimizes for:
-
-- repeatable onboarding
-- reusable operating definitions
-- clear runtime boundaries
-- a knowledge layer that stays useful over time
-
-This is the difference between:
-
-- "an agent that can do something once"
-- and "a system other humans and agents can keep using"
 
 ---
 
@@ -170,6 +137,36 @@ The design bias is:
 ```text
 company -> role -> SOP -> skill -> step
 ```
+
+---
+
+## What This Gives You
+
+- onboarding agents into a prepared environment
+- durable skill and SOP definitions
+- runtime spec separated from runtime state
+- a curated knowledge graph instead of a dumping ground
+- a human path and an agent path in the same repo
+
+It is intentionally small. It is not a full private operating system. It is the reusable layer underneath one.
+
+---
+
+## Why This Feels More Like A System
+
+Most agent repos optimize for isolated prompts and short-lived wrappers.
+
+`core` optimizes for:
+
+- repeatable onboarding
+- reusable operating definitions
+- clear runtime boundaries
+- a knowledge layer that stays useful over time
+
+This is the difference between:
+
+- "an agent that can do something once"
+- and "a system other humans and agents can keep using"
 
 ---
 
