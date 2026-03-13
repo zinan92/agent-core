@@ -1,8 +1,12 @@
 # Wendy System Core
 
-`core` is a public starter package for building an AI-native operating system.
+> A public starter package for building an AI-native operating system.
 
-It is designed for people who want a clean way to organize:
+`core` is designed around one simple claim:
+
+Most agent systems are still too loose. They have prompts, wrappers, and scattered notes, but not a clear operating model.
+
+This repo is a small, reproducible core for organizing:
 
 - agent onboarding
 - skills
@@ -10,118 +14,84 @@ It is designed for people who want a clean way to organize:
 - runtime definitions
 - a curated knowledge graph
 
-This repo is not a dump of an internal workspace. It is a trimmed public package meant to help you start from a clear core.
+It is intentionally not a dump of an internal workspace. It is a trimmed public package.
 
-## Who This Is For
+---
 
-This repo is for you if you want to:
+## Why This Exists
 
-- build your own agent system instead of running isolated one-off agents
-- manage agents with explicit roles, boundaries, and handoff rules
-- separate durable system definitions from messy runtime state
-- keep a knowledge graph as curated memory rather than as a raw storage pile
+Most current agent setups break in one of these ways:
+
+- no clear source of truth
+- no clean separation between role definition and runtime mess
+- no consistent onboarding model
+- no durable knowledge layer
+
+This repo exists to give you a cleaner starting point.
+
+Instead of treating agents as ad hoc personalities, this system treats them as:
+
+`company -> role -> SOP -> skill -> step`
+
+That makes the system easier to:
+
+- understand
+- reproduce
+- extend
+- hand off to other humans or agents
+
+---
+
+## What Makes This Different
+
+| Common Agent Repo | `core` |
+|---|---|
+| loose prompts and wrappers | explicit operating model |
+| runtime state mixed with definitions | runtime spec and runtime state are separated |
+| every workspace becomes its own truth | one canonical owner for durable definitions |
+| knowledge base becomes a dumping ground | knowledge graph is curated memory |
+| hard for another agent to use | agent-facing docs are explicit and structured |
+
+---
 
 ## What You Get
 
-- a compact architecture for an AI operating system
-- a new-agent onboarding mechanism
-- a small baseline set of default skills
-- reusable templates for profiles, runtime specs, and SOPs
-- a starter knowledge graph structure
-- one demo agent and example notes
+- a compact system architecture
+- a clean onboarding mechanism
+- a baseline set of default skills
+- reusable templates
+- a starter knowledge graph skeleton
+- one demo agent
+- one end-to-end walkthrough
 
-## Quickstart
+---
 
-### 1. Understand the model
+## Start Here
 
-Read:
+### If you are a human evaluating the system
 
-- [ARCHITECTURE.md](ARCHITECTURE.md)
-- [PRINCIPLES.md](PRINCIPLES.md)
+Read these first:
 
-### 2. See a concrete example
+1. [ARCHITECTURE.md](ARCHITECTURE.md)
+2. [PRINCIPLES.md](PRINCIPLES.md)
+3. [QUICKSTART.md](QUICKSTART.md)
 
-Open:
+Then look at:
 
 - [examples/demo-agent/](examples/demo-agent)
-- [examples/demo-runtime-spec.md](examples/demo-runtime-spec.md)
-- [examples/demo-sop.md](examples/demo-sop.md)
-
-### 3. Start from the templates
-
-Use:
-
-- [templates/agent-profile/](templates/agent-profile)
-- [templates/runtime-spec/default-runtime-spec.md](templates/runtime-spec/default-runtime-spec.md)
-- [templates/sop/canonical-sop-template.md](templates/sop/canonical-sop-template.md)
-
-### 4. Use the onboarding mechanism
-
-The core bootstrap lives here:
-
-- [skills/agent-onboarding/](skills/agent-onboarding)
-
-This is the mechanism for creating a clean new agent environment.
-
-### 5. Start your knowledge graph
-
-Use:
-
-- [knowledge-graph-template/](knowledge-graph-template)
-
-Start by capturing material in `inbox/`, then promote only durable notes into `curated/`.
-
-If you want a fuller walkthrough, read:
-
-- [TUTORIAL.md](TUTORIAL.md)
 - [DEMO-WALKTHROUGH.md](DEMO-WALKTHROUGH.md)
 
-## Core Concepts
+### If you are giving this repo to an agent
 
-### 1. Skill-Driven Organization
+Start here:
 
-Treat the system as:
+1. [docs/agent/START.md](docs/agent/START.md)
+2. [docs/agent/CONTRACT.md](docs/agent/CONTRACT.md)
+3. [docs/agent/BOOTSTRAP.md](docs/agent/BOOTSTRAP.md)
 
-- company
-- role
-- SOP
-- skill
-- step
+This is the execution path for agents that need to deploy, test, or bootstrap the system.
 
-Instead of treating work as vague job titles, break roles into finite, reusable operating units.
-
-### 2. Single Source of Truth
-
-Durable definitions should have one owner.
-
-In the original internal system, the manager layer owned:
-
-- skills
-- SOPs
-- agent profiles
-- runtime specs
-
-This package preserves that pattern.
-
-### 3. Runtime Spec vs Runtime State
-
-Keep these separate:
-
-- `runtime spec` = the canonical operating definition
-- `runtime state` = the live working surface
-
-This separation is one of the most important patterns in the repo.
-
-### 4. Curated Knowledge Graph
-
-The knowledge graph should be:
-
-- filtered
-- compressed
-- durable
-- useful across time
-
-It should not be a dumping ground for every raw output.
+---
 
 ## Repository Structure
 
@@ -131,6 +101,8 @@ core/
   PRINCIPLES.md
   ARCHITECTURE.md
   QUICKSTART.md
+  TUTORIAL.md
+  DEMO-WALKTHROUGH.md
 
   skills/
     agent-onboarding/
@@ -150,7 +122,52 @@ core/
     demo-agent/
     demo-runtime-spec.md
     demo-sop.md
+
+  docs/agent/
+    START.md
+    CONTRACT.md
+    BOOTSTRAP.md
 ```
+
+---
+
+## The Smallest Useful Loop
+
+If you only do one thing with this repo, do this:
+
+1. copy the demo agent model
+2. scaffold one new workspace
+3. write one runtime spec
+4. write one SOP
+5. create one curated note
+
+That is enough to test whether the system is actually usable.
+
+For the full command-level version, read:
+
+- [DEMO-WALKTHROUGH.md](DEMO-WALKTHROUGH.md)
+
+---
+
+## Core Concepts
+
+### Skill-Driven Organization
+
+Roles are built from finite SOP bundles, not vague job titles.
+
+### Single Source of Truth
+
+Durable definitions should have one owner.
+
+### Runtime Spec vs Runtime State
+
+Definitions and live working state should not be mixed.
+
+### Curated Knowledge Graph
+
+Knowledge should be promoted, filtered, and compressed, not merely accumulated.
+
+---
 
 ## What This Repo Is Not
 
@@ -161,17 +178,9 @@ This repo is not:
 - a dump of every agent profile ever used
 - a collection of runtime logs, conversations, or local machine state
 
-It is the smallest public package that still shows how the core works.
+It is a small public core meant to be understandable and reusable.
 
-## Suggested First Build
-
-If you want to use this repo immediately, do this:
-
-1. Duplicate the demo agent into your own role.
-2. Fill out a runtime spec for that role.
-3. Use the onboarding skill to scaffold the workspace.
-4. Create your first curated note in the knowledge graph template.
-5. Add company-specific skills only after the baseline layer is stable.
+---
 
 ## Next Files To Read
 
@@ -180,4 +189,5 @@ If you want to use this repo immediately, do this:
 - [QUICKSTART.md](QUICKSTART.md)
 - [TUTORIAL.md](TUTORIAL.md)
 - [DEMO-WALKTHROUGH.md](DEMO-WALKTHROUGH.md)
+- [docs/agent/START.md](docs/agent/START.md)
 - [CONTRIBUTING.md](CONTRIBUTING.md)
