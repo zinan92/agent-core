@@ -104,3 +104,9 @@ Once the demo makes sense:
 5. create one curated note
 
 Do not scale before this small loop feels clean.
+
+## Want The Command-Level Version?
+
+Read:
+
+- [DEMO-WALKTHROUGH.md](DEMO-WALKTHROUGH.md)

@@ -74,6 +74,7 @@ Start by capturing material in `inbox/`, then promote only durable notes into `c
 If you want a fuller walkthrough, read:
 
 - [TUTORIAL.md](TUTORIAL.md)
+- [DEMO-WALKTHROUGH.md](DEMO-WALKTHROUGH.md)
 
 ## Core Concepts
 
@@ -178,4 +179,5 @@ If you want to use this repo immediately, do this:
 - [skills/default/README.md](skills/default/README.md)
 - [QUICKSTART.md](QUICKSTART.md)
 - [TUTORIAL.md](TUTORIAL.md)
+- [DEMO-WALKTHROUGH.md](DEMO-WALKTHROUGH.md)
 - [CONTRIBUTING.md](CONTRIBUTING.md)

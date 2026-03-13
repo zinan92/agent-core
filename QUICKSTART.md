@@ -37,3 +37,9 @@ Use:
 - `knowledge-graph-template/`
 
 Start by promoting only durable notes into `curated/`.
+
+## 6. Run The Full Demo Loop
+
+For an end-to-end example with actual commands, read:
+
+- `DEMO-WALKTHROUGH.md`

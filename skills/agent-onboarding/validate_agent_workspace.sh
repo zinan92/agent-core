@@ -9,7 +9,7 @@ fi
 AGENT_SLUG="$1"
 WORKSPACE_PATH="$2"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-WENDY_ROOT="$(cd "${SCRIPT_DIR}/../../../../" && pwd)"
+WENDY_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
 PROFILE_DIR="${WENDY_ROOT}/agent-profiles/${AGENT_SLUG}"
 RUNTIME_SPEC_PATH="${WENDY_ROOT}/agent-runtime-specs/${AGENT_SLUG}.md"
 SOP_DIR="${WENDY_ROOT}/sops/${AGENT_SLUG}"
