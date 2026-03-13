@@ -36,52 +36,43 @@
 
 </div>
 
-## System Overview
+## At A Glance
 
 ```mermaid
 flowchart LR
-    subgraph H[Human Path]
-        H1[README]
-        H2[Architecture]
-        H3[Principles]
-        H4[Quickstart]
+    subgraph H[For Humans]
+        H1[Evaluate]
+        H2[Adopt]
         H1 --> H2
-        H1 --> H3
-        H1 --> H4
     end
 
     subgraph C[core]
-        C1[Onboarding]
-        C2[Skills]
-        C3[SOPs]
-        C4[Runtime Spec]
-        C5[Knowledge Graph Template]
-        C1 --> C4
-        C2 --> C1
-        C3 --> C1
-        C4 --> C5
+        C1[Onboard]
+        C2[Define]
+        C3[Run]
+        C4[Remember]
+        C1 --> C2 --> C3 --> C4
     end
 
-    subgraph A[Agent Path]
-        A1[Agent Start]
-        A2[Contract]
-        A3[Bootstrap]
-        A4[Demo Agent]
-        A1 --> A2
-        A1 --> A3
-        A3 --> A4
+    subgraph A[For Agents]
+        A1[Bootstrap]
+        A2[Validate]
+        A3[Operate]
+        A1 --> A2 --> A3
     end
 
-    H4 --> C1
-    A3 --> C1
+    H1 --> C2
+    A1 --> C1
+    C4 --> H2
+    C3 --> A3
 
     classDef human fill:#dff3e4,stroke:#2da44e,color:#0f5132
     classDef core fill:#e7f0ff,stroke:#1f6feb,color:#0b3d91
     classDef agent fill:#f3f4f6,stroke:#111827,color:#111827
 
-    class H1,H2,H3,H4 human
-    class C1,C2,C3,C4,C5 core
-    class A1,A2,A3,A4 agent
+    class H1,H2 human
+    class C1,C2,C3,C4 core
+    class A1,A2,A3 agent
 ```
 
 <table>
