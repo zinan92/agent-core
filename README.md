@@ -11,12 +11,18 @@
 </p>
 
 <p>
-  <strong>Skills</strong> · <strong>SOPs</strong> · <strong>Runtime Specs</strong> · <strong>Curated Knowledge</strong>
+  <strong>Onboarding</strong> · <strong>Skills</strong> · <strong>SOPs</strong> · <strong>Runtime Specs</strong> · <strong>Curated Knowledge</strong>
 </p>
 
 <p>
   For humans evaluating the system.<br/>
   For agents actually bootstrapping it.
+</p>
+
+<p>
+  <a href="./QUICKSTART.md"><strong>Start Here</strong></a> ·
+  <a href="./DEMO-WALKTHROUGH.md"><strong>Run the Demo</strong></a> ·
+  <a href="./docs/agent/START.md"><strong>Agent Entry</strong></a>
 </p>
 
 </div>
@@ -36,6 +42,24 @@ This repository gives you a compact core for:
 - keeping a knowledge graph as curated memory
 
 It is intentionally small. The point is not to expose a full private operating system. The point is to publish a clean system core that can be understood, handed off, and reused.
+
+---
+
+## Why It Feels Different
+
+Most agent repos optimize for isolated prompts.
+
+`core` optimizes for:
+
+- repeatable onboarding
+- reusable operating definitions
+- clear runtime boundaries
+- a knowledge layer that stays useful over time
+
+This is the difference between:
+
+- "an agent that can do something once"
+- and "a system other humans and agents can keep using"
 
 ---
 
@@ -104,18 +128,6 @@ company -> role -> SOP -> skill -> step
 
 ---
 
-## At A Glance
-
-| This repo gives you | This repo does not try to be |
-|---|---|
-| an onboarding mechanism | a full internal company system |
-| baseline default skills | a giant knowledge vault |
-| reusable templates | a dump of runtime logs |
-| a starter knowledge graph | a collection of random prompts |
-| a demo agent and walkthrough | every agent profile ever used |
-
----
-
 ## Why This Exists
 
 Most current agent setups break in one of these ways:
@@ -150,13 +162,14 @@ That makes the system easier to:
 
 ## What You Get
 
-- a compact system architecture
-- a clean onboarding mechanism
-- a baseline set of default skills
-- reusable templates for profiles, runtime specs, and SOPs
-- a starter knowledge graph skeleton
-- one demo agent
-- one command-level walkthrough
+| Included | Why it matters |
+|---|---|
+| onboarding mechanism | gives the system a repeatable bootstrap path |
+| default skills | establishes a baseline capability layer |
+| reusable templates | keeps role definition and setup consistent |
+| knowledge graph skeleton | gives curated memory a clean starting shape |
+| demo agent | makes the model concrete |
+| command-level walkthrough | turns the repo into something runnable |
 
 ---
 
