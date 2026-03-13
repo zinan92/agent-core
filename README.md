@@ -214,7 +214,7 @@ That makes the system easier to:
 | Included | Why it matters |
 |---|---|
 | onboarding mechanism | gives the system a repeatable bootstrap path |
-| default skills | establishes a baseline capability layer |
+| default skills | establishes a baseline capability layer, including visual communication |
 | reusable templates | keeps role definition and setup consistent |
 | knowledge graph skeleton | gives curated memory a clean starting shape |
 | demo agent | makes the model concrete |

@@ -7,6 +7,10 @@ Within that library, the core model is:
 - `default/` = baseline skills every new agent should have access to
 - `package activation` = the currently active workflow grouping for the role or task
 
+One of those baseline defaults should be visual communication.
+
+Agents should not rely on prose alone when a visual map would improve understanding.
+
 This repo starts with two visible layers:
 
 - `agent-onboarding/` = the core bootstrap mechanism

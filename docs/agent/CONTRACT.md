@@ -74,3 +74,7 @@ When changing this repo:
 - preserve clarity
 - avoid overbuilding
 - favor reproducibility over accumulation
+
+## 7. Communication Bias
+
+When a workflow, boundary, or ownership model is easier to understand visually, prefer a compact diagram or canvas over a long prose explanation.
