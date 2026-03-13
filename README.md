@@ -32,7 +32,7 @@
 <div align="center">
 
 **Not another prompt bundle.**  
-`core` is a compact operating model with one owner for durable definitions, one path for human evaluation, and one path for agent execution.
+`core` gives you one owner for durable definitions, one path for humans, and one path for agents.
 
 </div>
 
@@ -131,7 +131,7 @@ flowchart LR
   <tr>
     <td valign="top" width="50%">
       <strong>For Humans</strong><br/><br/>
-      Evaluate the operating model and decide whether this system is coherent enough to adopt.
+      Evaluate the system and decide whether it is coherent enough to adopt.
       <br/><br/>
       Start with:
       <br/>
@@ -141,7 +141,7 @@ flowchart LR
     </td>
     <td valign="top" width="50%">
       <strong>For Agents</strong><br/><br/>
-      Bootstrap the smallest working loop, validate it, and do not invent extra system behavior.
+      Bootstrap the smallest loop, validate it, and do not invent extra behavior.
       <br/><br/>
       Start with:
       <br/>
@@ -156,11 +156,11 @@ flowchart LR
 
 ## What This Gives You
 
-- onboarding agents into a prepared environment
+- onboarding into a prepared environment
 - durable skill and SOP definitions
 - runtime spec separated from runtime state
-- a curated knowledge graph instead of a dumping ground
-- a human path and an agent path in the same repo
+- a curated knowledge graph
+- a human path and an agent path
 
 It is intentionally small. It is not a full private operating system. It is the reusable layer underneath one.
 
