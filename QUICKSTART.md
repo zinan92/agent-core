@@ -7,6 +7,7 @@ Read:
 - `PRINCIPLES.md`
 - `ARCHITECTURE.md`
 - `skills/agent-onboarding/SKILL.md`
+- `skills/README.md`
 
 ## 2. Pick A Demo Role
 
@@ -29,6 +30,12 @@ Use:
 - `skills/agent-onboarding/`
 
 This creates a prepared environment rather than asking the new agent to invent its own operating model.
+
+When thinking about skills, use this model:
+
+- give agents access to one shared library
+- group skills into packages
+- activate packages selectively by role or task
 
 ## 5. Start A Knowledge Graph
 

@@ -31,6 +31,23 @@ Each agent is split into two layers:
 
 The runtime surface should contain queues and local state, not the durable role definition.
 
+## Skill Access Model
+
+Agents do not need completely different installed skill sets.
+
+The preferred model is:
+
+- `skill library` = the full shared capability inventory
+- `skill package` = a grouped subset for a domain or workflow
+- `activation` = the package currently turned on for the role or task
+
+This means the system should prefer:
+
+- universal availability of the library
+- selective activation of packages
+
+instead of activating every skill all the time.
+
 ## Knowledge Graph Boundary
 
 The knowledge graph is a curated memory layer.

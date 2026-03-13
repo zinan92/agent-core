@@ -22,6 +22,18 @@ Treat organizations as:
 - skill
 - step
 
-## 5. Curated Knowledge, Not Raw Accumulation
+## 5. Universal Library, Selective Activation
+
+Do not assume each agent needs a different installed skill set.
+
+Prefer:
+
+- one shared skill library
+- package-based grouping
+- selective activation by role or task
+
+This keeps the system reproducible while preserving clear behavior boundaries.
+
+## 6. Curated Knowledge, Not Raw Accumulation
 
 A knowledge graph should hold promoted, durable knowledge rather than every raw output.
