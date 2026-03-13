@@ -71,6 +71,10 @@ Use:
 
 Start by capturing material in `inbox/`, then promote only durable notes into `curated/`.
 
+If you want a fuller walkthrough, read:
+
+- [TUTORIAL.md](TUTORIAL.md)
+
 ## Core Concepts
 
 ### 1. Skill-Driven Organization
@@ -173,3 +177,5 @@ If you want to use this repo immediately, do this:
 - [skills/README.md](skills/README.md)
 - [skills/default/README.md](skills/default/README.md)
 - [QUICKSTART.md](QUICKSTART.md)
+- [TUTORIAL.md](TUTORIAL.md)
+- [CONTRIBUTING.md](CONTRIBUTING.md)
